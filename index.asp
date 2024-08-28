@@ -18,3 +18,23 @@
     </form>
 </body>
 </html>
+
+
+
+
+
+
+*********************************************************************
+using System;
+
+namespace YourNamespace
+{
+    public partial class VulnerablePage : System.Web.UI.Page
+    {
+        protected void btnSubmit_Click(object sender, EventArgs e)
+        {
+            // هنا تكمن الثغرة، حيث يتم عرض المدخلات مباشرة دون أي معالجة
+            lblOutput.Text = "مرحبا، " + txtName.Text; 
+        }
+    }
+}
